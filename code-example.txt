@@ -1,0 +1,9 @@
+fun main(args: Array&lt;String&gt;) {
+    print(sum(2,3))
+}
+
+//sampleStart
+fun sum(firstNum: Int, secondNum: Int) : Int {
+  return firstNum + secondNum                   
+}
+//sampleEnd
