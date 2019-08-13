@@ -12,7 +12,7 @@
 function insertKotlinCodeBlock(code){
     document.getElementById('container').insertAdjacentHTML(
         'beforeend',
-        '<h1>Kotlin Playground demo</h1><div class="kotlin-code" data-target-platform="jvm" theme="darcula"><pre><code class="hljs language-kotlin">code</code></pre></div>'
+        `<h1>Kotlin Playground demo</h1><div class="kotlin-code" data-target-platform="jvm" theme="darcula"><pre><code class="hljs language-kotlin">${code}</code></pre></div>`
     );
 } 
 
