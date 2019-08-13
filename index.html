@@ -8,8 +8,13 @@
 <section id="container">
 <script src="https://unpkg.com/kotlin-playground@1"></script>
 <script>
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOMContentLoaded')
+    KotlinPlayground('.kotlin-playground');
+});
 
 function insertKotlinCodeBlock(title,code){
+    console.log('start insertKotlinCodeBlock')
     document.getElementById('container').insertAdjacentHTML(
         'beforeend',
         `<h1>${title}</h1>`
@@ -20,10 +25,8 @@ function insertKotlinCodeBlock(title,code){
         `<div class="kotlin-code" data-target-platform="jvm" theme="darcula"><pre><code class="hljs language-kotlin">${code}</code></pre></div>`
     );
     
-    document.addEventListener('DOMContentLoaded', function() {
-      console.log('DOMContentLoaded')
-      KotlinPlayground('.code-blocks-selector');
-    });
+    KotlinPlayground('.code-blocks-selector');
+    console.log('end insertKotlinCodeBlock')
 } 
 
 fetch("https://shumidub.github.io/KotlinPlaygroundExample/code-example.txt")
