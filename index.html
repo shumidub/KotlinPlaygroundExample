@@ -6,7 +6,7 @@
 </head>
 <body>
 <section id="container">
-<script src="https://unpkg.com/kotlin-playground@1" data-selector=".kotlin-code"></script>    
+<script src="https://unpkg.com/kotlin-playground@1"></script>
 <script>
 
 function insertKotlinCodeBlock(title,code){
@@ -19,6 +19,8 @@ function insertKotlinCodeBlock(title,code){
         'beforeend',
         `<div class="kotlin-code" data-target-platform="jvm" theme="darcula"><pre><code class="hljs language-kotlin">${code}</code></pre></div>`
     );
+    
+    KotlinPlayground('.code-blocks-selector');
 } 
 
 fetch("https://shumidub.github.io/KotlinPlaygroundExample/code-example.txt")
