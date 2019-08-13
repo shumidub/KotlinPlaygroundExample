@@ -20,7 +20,10 @@ function insertKotlinCodeBlock(title,code){
         `<div class="kotlin-code" data-target-platform="jvm" theme="darcula"><pre><code class="hljs language-kotlin">${code}</code></pre></div>`
     );
     
-    KotlinPlayground('.code-blocks-selector');
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOMContentLoaded')
+      KotlinPlayground('.code-blocks-selector');
+    });
 } 
 
 fetch("https://shumidub.github.io/KotlinPlaygroundExample/code-example.txt")
