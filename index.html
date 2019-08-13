@@ -11,13 +11,18 @@
 function insertKotlinCodeBlock(title,code){
     document.getElementById('container').insertAdjacentHTML(
         'beforeend',
-        `<script src="https://unpkg.com/kotlin-playground@1" data-selector=".kotlin-code"></script><h1>${title}</h1><div class="kotlin-code" data-target-platform="jvm" theme="darcula"><pre><code class="hljs language-kotlin">${code}</code></pre></div>`
+        `<h1>${title}</h1>`
+    );
+    
+    document.getElementById('container').insertAdjacentHTML(
+        'beforeend',
+        `<script src="https://unpkg.com/kotlin-playground@1" data-selector=".kotlin-code"></script><div class="kotlin-code" data-target-platform="jvm" theme="darcula"><pre><code class="hljs language-kotlin">${code}</code></pre></div>`
     );
 } 
 
 fetch("https://shumidub.github.io/KotlinPlaygroundExample/code-example.txt")
     .then( response => response.text() )
-    .then( text => insertKotlinCodeBlock("Kotlin Playground demo", text) )
+    .then( text => insertKotlinCodeBlock('Kotlin Playground demo', text) )
 
 </script>
 </section>
