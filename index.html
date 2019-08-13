@@ -17,7 +17,7 @@ function insertKotlinCodeBlock(title,code){
     
     document.getElementById('container').insertAdjacentHTML(
         'beforeend',
-        `<script src="https://unpkg.com/kotlin-playground@1" data-selector=".kotlin-code"></script><div class="kotlin-code" data-target-platform="jvm" theme="darcula"><pre><code class="hljs language-kotlin">${code}</code></pre></div>`
+        `<div class="kotlin-code" data-target-platform="jvm" theme="darcula"><pre><code class="hljs language-kotlin">${code}</code></pre></div>`
     );
 } 
 
