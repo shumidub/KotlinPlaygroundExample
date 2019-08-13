@@ -3,22 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>Kotlin Playground examples</title>
-<script src="https://unpkg.com/kotlin-playground@1" data-selector=".kotlin-code"></script>
 </head>
 <body>
 <section id="container">
 <script>
 
-function insertKotlinCodeBlock(code){
+function insertKotlinCodeBlock(title, code){
     document.getElementById('container').insertAdjacentHTML(
         'beforeend',
-        `<h1>Kotlin Playground demo</h1><div class="kotlin-code" data-target-platform="jvm" theme="darcula"><pre><code class="hljs language-kotlin">${code}</code></pre></div>`
+        `<script src="https://unpkg.com/kotlin-playground@1" data-selector=".kotlin-code"></script><h1>${title}</h1><div class="kotlin-code" data-target-platform="jvm" theme="darcula"><pre><code class="hljs language-kotlin">${code}</code></pre></div>`
     );
 } 
 
 fetch("https://shumidub.github.io/KotlinPlaygroundExample/code-example.txt")
     .then( response => response.text() )
-    .then( text => insertKotlinCodeBlock(text) )
+    .then( text => insertKotlinCodeBlock('Kotlin Playground demo', text) )
 
 </script>
 </section>
