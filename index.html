@@ -9,7 +9,6 @@
 <script src="https://unpkg.com/kotlin-playground@1"></script>
 <script>
 function insertKotlinCodeBlock(title,code){
-    console.log('start insertKotlinCodeBlock')
     document.getElementById('container').insertAdjacentHTML(
         'beforeend',
         `<h1>${title}</h1>`
@@ -19,12 +18,13 @@ function insertKotlinCodeBlock(title,code){
         'beforeend',
         `<div class="kotlin-code" data-target-platform="jvm" theme="darcula"><pre><code class="hljs language-kotlin">${code}</code></pre></div>`
     );
-    console.log('end insertKotlinCodeBlock')
-} 
+  
+    KotlinPlayground('.kotlin-playground');
+}
 
 fetch("/code-example.txt")
     .then( response => response.text() )
-    .then( text => insertKotlinCodeBlock('Kotlin Playground demo', text); console.log('then KotlinPlayground'); KotlinPlayground('.kotlin-playground'); )
+    .then( text => insertKotlinCodeBlock('Kotlin Playground demo', text) )
 
 </script>
 </section>
