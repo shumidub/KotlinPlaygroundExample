@@ -24,8 +24,7 @@ function insertKotlinCodeBlock(title,code){
 
 fetch("/code-example.txt")
     .then( response => response.text() )
-    .then( text => insertKotlinCodeBlock('Kotlin Playground demo', text) )
-    .then( console.log('then KotlinPlayground'); KotlinPlayground('.kotlin-playground'); )
+    .then( text => insertKotlinCodeBlock('Kotlin Playground demo', text); console.log('then KotlinPlayground'); KotlinPlayground('.kotlin-playground'); )
 
 </script>
 </section>
