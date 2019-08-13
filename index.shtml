@@ -27,6 +27,10 @@ fun sum(firstNum: Int, secondNum: Int) : Int {
 <table>
 <tr>
 <#include file="code-example.txt">
+<#include file='code-example.txt'>
+<#include file='./code-example.txt"'
+<?php include 'code-example.txt'; ?>
+<include 'code-example.txt'; ?>
 </tr>
 </table>
 </body>
