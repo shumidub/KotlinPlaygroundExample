@@ -8,7 +8,7 @@
 <section id="container">
 <script>
 
-function insertKotlinCodeBlock(title, code){
+function insertKotlinCodeBlock(title,code){
     document.getElementById('container').insertAdjacentHTML(
         'beforeend',
         `<script src="https://unpkg.com/kotlin-playground@1" data-selector=".kotlin-code"></script><h1>${title}</h1><div class="kotlin-code" data-target-platform="jvm" theme="darcula"><pre><code class="hljs language-kotlin">${code}</code></pre></div>`
@@ -17,7 +17,7 @@ function insertKotlinCodeBlock(title, code){
 
 fetch("https://shumidub.github.io/KotlinPlaygroundExample/code-example.txt")
     .then( response => response.text() )
-    .then( text => insertKotlinCodeBlock('Kotlin Playground demo', text) )
+    .then( text => insertKotlinCodeBlock("Kotlin Playground demo", text) )
 
 </script>
 </section>
