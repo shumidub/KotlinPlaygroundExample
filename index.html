@@ -22,16 +22,10 @@ fun sum(firstNum: Int, secondNum: Int) : Int {
 </code>
 </pre>
 </div>
-<?php include 'code-example.txt'; ?>
-<?php include './code-example.txt'; ?>
-<table>
-<tr>
-<#include file="code-example.txt">
-<#include file='code-example.txt'>
-<#include file='./code-example.txt"'
-<?php include 'code-example.txt'; ?>
-<include 'code-example.txt'; ?>
-</tr>
-</table>
+<script>
+    fetch("https://shumidub.github.io/KotlinPlaygroundExample/code-example.txt")
+    .then( response => response.text() )
+    .then( text => console.log(text) )
+</script>
 </body>
 </html>
