@@ -19,7 +19,7 @@ function insertKotlinCodeBlock(title,code){
         `<div class="kotlin-code" data-target-platform="jvm" theme="darcula"><pre><code class="hljs language-kotlin">${code}</code></pre></div>`
     );
   
-    KotlinPlayground('.code');
+    KotlinPlayground('code');
 }
 
 fetch("code-example.txt")
