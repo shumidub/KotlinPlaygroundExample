@@ -22,12 +22,11 @@ function insertKotlinCodeBlock(title,code){
     KotlinPlayground('.code-blocks-selector');
 }
 
-fetch("/code-example.txt")
+fetch("code-example.txt")
     .then( response => response.text() )
     .then( text => insertKotlinCodeBlock('Kotlin Playground demo', text) )
 
 </script>
-</section>
-<script src="https://unpkg.com/kotlin-playground@1" data-selector="code" defer></script>    
+</section> 
 </body>
 </html>
