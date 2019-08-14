@@ -1,9 +1,10 @@
-fun main(args: Array&lt;String&gt;) {
-    print(sum(2,3))
-}
-
 //sampleStart
+//comment
+//region one
 fun sum(firstNum: Int, secondNum: Int) : Int {
   return firstNum + secondNum                   
 }
+//endregion
+
+print(sum(5,-7))
 //sampleEnd
