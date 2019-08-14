@@ -1,4 +1,3 @@
-//sampleStart
 //comment
 //region one
 fun sum(firstNum: Int, secondNum: Int) : Int {
@@ -7,4 +6,3 @@ fun sum(firstNum: Int, secondNum: Int) : Int {
 //endregion
 
 print(sum(5,-7))
-//sampleEnd
