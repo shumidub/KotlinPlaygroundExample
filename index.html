@@ -24,7 +24,7 @@ function insertKotlinCodeBlock(title, code){
 }
 
 function getCodeIntoMainFun(code) {
-    return "fun main(args: Array&lt;String&gt;) {\n//sampleStart\n${code}\n//sampleEnd\n}"  
+    return `fun main(args: Array&lt;String&gt;) {\n//sampleStart\n${code}\n//sampleEnd\n}`  
 }
     
 fetch("FirstExample.kt")
