@@ -29,11 +29,11 @@ function getCodeIntoMainFun(code) {
     
 fetch("FirstExample.kt")
     .then( response => response.text() )
-    .then( text => insertKotlinCodeBlock("The first demo", getCodeIntoMainFun(code)) )
+    .then( text => insertKotlinCodeBlock("The first demo", getCodeIntoMainFun(text)) )
     
 fetch("SecondExample.kt")
     .then( response => response.text() )
-    .then( text => insertKotlinCodeBlock("The second demo", getCodeIntoMainFun(code)) )    
+    .then( text => insertKotlinCodeBlock("The second demo", getCodeIntoMainFun(text)) )    
     
 </script>
 </section> 
