@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Kotlin Playground examples</title>
 </head>
-<body style="background-color:#44475a; color:#FF0000">
+<body style="background-color:#44475a; color:#282a36">
 <h1>Kotlin Playground examples</h1>    
 <section id="container">
 <script src="https://unpkg.com/kotlin-playground@1" theme="darcula"></script>
@@ -25,11 +25,7 @@ function insertKotlinCodeBlock(title, code){
 
 fetch("code-example.txt")
     .then( response => response.text() )
-    .then( text => insertKotlinCodeBlock('The first demo', text) )
-    
-    fetch("code-example.txt")
-    .then( response => response.text() )
-    .then( text => insertKotlinCodeBlock(`The first demo2`, text) )
+    .then( text => insertKotlinCodeBlock("The first demo", text) )
     
 fetch("SecondExample.kt")
     .then( response => response.text() )
