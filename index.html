@@ -6,7 +6,7 @@
 </head>
 <body style="background-color:#3d3f4d; color:#1a1b1e">
 <h1>Kotlin Playground examples</h1>    
-<section id="container">
+<section id="container" style="max-width:500px;">
 <script src="https://unpkg.com/kotlin-playground@1" theme="darcula"></script>
 <script>
 function insertKotlinCodeBlock(title, code){
@@ -17,7 +17,7 @@ function insertKotlinCodeBlock(title, code){
     
     document.getElementById('container').insertAdjacentHTML(
         'beforeend',
-        `<div class="kotlin-code" style="max-width:500px;"><pre><code class="hljs language-kotlin" theme="darcula" data-target-platform="jvm">${code}</code></pre></div>`
+        `<div class="kotlin-code"><pre><code class="hljs language-kotlin" theme="darcula" data-target-platform="jvm">${code}</code></pre></div>`
     );
   
     KotlinPlayground('code');
