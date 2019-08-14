@@ -23,11 +23,9 @@ function insertKotlinCodeBlock(title, code){
     KotlinPlayground('code');
 }
 
-function getCodeIntoMainFun(code) = "fun main(args: Array&lt;String&gt;) {
-//sampleStart
-${code}
-//sampleEnd
-}"  
+function getCodeIntoMainFun(code) {
+    return "fun main(args: Array&lt;String&gt;) {\n//sampleStart\n${code}\n//sampleEnd\n}"  
+}
     
 fetch("FirstExample.kt")
     .then( response => response.text() )
