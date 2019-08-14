@@ -26,7 +26,11 @@ function insertKotlinCodeBlock(title,code){
 fetch("code-example.txt")
     .then( response => response.text() )
     .then( text => insertKotlinCodeBlock('The first demo', text) )
-
+    
+fetch("SecondExample.kt")
+    .then( response => response.text() )
+    .then( text => insertKotlinCodeBlock('The second demo', text) )    
+    
 </script>
 </section> 
 </body>
