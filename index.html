@@ -17,19 +17,25 @@ function insertKotlinCodeBlock(title, code){
     
     document.getElementById('container').insertAdjacentHTML(
         'beforeend',
-        `<div class="kotlin-code"><pre><code class="hljs language-kotlin" theme="darcula" data-target-platform="jvm">${code}</code></pre></div>`
+        `<div class="kotlin-code"><pre><code class="hljs language-kotlin" theme="darcula" data-target-platform="jvm" folded-button="false">${code}</code></pre></div>`
     );
   
     KotlinPlayground('code');
 }
 
+function getCodeIntoMainFun(code) = "fun main(args: Array&lt;String&gt;) {
+//sampleStart
+${code}
+//sampleEnd
+}"  
+    
 fetch("code-example.txt")
     .then( response => response.text() )
-    .then( text => insertKotlinCodeBlock("The first demo", text) )
+    .then( text => insertKotlinCodeBlock("The first demo", getCodeIntoMainFun(code)) )
     
 fetch("SecondExample.kt")
     .then( response => response.text() )
-    .then( text => insertKotlinCodeBlock("The second demo", text) )    
+    .then( text => insertKotlinCodeBlock("The second demo", getCodeIntoMainFun(code)) )    
     
 </script>
 </section> 
