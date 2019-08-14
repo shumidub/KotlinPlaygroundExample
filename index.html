@@ -4,14 +4,15 @@
 <meta charset="UTF-8">
 <title>Kotlin Playground examples</title>
 </head>
-<body style="background-color:#44475a;">   
+<body style="background-color:#44475a;">
+<h1>Kotlin Playground examples</h1>    
 <section id="container">
 <script src="https://unpkg.com/kotlin-playground@1" theme="darcula"></script>
 <script>
 function insertKotlinCodeBlock(title,code){
     document.getElementById('container').insertAdjacentHTML(
         'beforeend',
-        `<h1><p style="color:#25262d;>${title}</p></h1>`
+        `<h2><p style="color:#25262d;>${title}</p></h2>`
     );
     
     document.getElementById('container').insertAdjacentHTML(
@@ -26,9 +27,13 @@ fetch("code-example.txt")
     .then( response => response.text() )
     .then( text => insertKotlinCodeBlock('The first demo', text) )
     
+    fetch("code-example.txt")
+    .then( response => response.text() )
+    .then( text => insertKotlinCodeBlock(`The first demo2`, text) )
+    
 fetch("SecondExample.kt")
     .then( response => response.text() )
-    .then( text => insertKotlinCodeBlock('The second demo', text) )    
+    .then( text => insertKotlinCodeBlock("The second demo", text) )    
     
 </script>
 </section> 
